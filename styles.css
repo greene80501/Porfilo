@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #121212;
+    overflow-x: hidden;
+}
+
+#gameOfLife {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures that the canvas doesn't interfere with scrolling */
+}
+text {
+    text-align: center;
+    padding: 50px 20px;
+}
+header, #about, #portfolio, #contact {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+header {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#about, #contact{
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.portfolio-item {
+    margin: 20px;
+    width: calc(33.333% - 40px);
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+#pauseButton {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#pauseButton:hover {
+    background-color: #333333;
+}
+/* Ensure full height scrolling */
+html, body {
+    height: 100%;
+}
