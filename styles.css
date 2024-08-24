@@ -16,10 +16,7 @@ body {
     height: 100%;
     pointer-events: none; /* Ensures that the canvas doesn't interfere with scrolling */
 }
-text {
-    text-align: center;
-    padding: 50px 20px;
-}
+
 header, #about, #portfolio, #contact {
     position: relative;
     z-index: 1;
@@ -40,7 +37,7 @@ section {
     padding: 50px 20px;
 }
 
-#about, #contact{
+#about, #contact {
     background-color: #1e1e1e;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -54,12 +51,16 @@ section {
 }
 
 .portfolio-item {
+    display: block;
     margin: 20px;
     width: calc(33.333% - 40px);
     background-color: #1e1e1e;
     border-radius: 8px;
     padding: 10px;
     text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .portfolio-item img {
@@ -69,17 +70,27 @@ section {
     border-radius: 10px;
 }
 
+.portfolio-item p {
+    margin: 10px 0;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 h2 {
     border-bottom: 2px solid #ffffff;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
+
 #pauseButton {
     background-color: #1e1e1e;
     color: #ffffff;
     border: 2px solid #ffffff;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 24px;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -87,6 +98,7 @@ h2 {
 #pauseButton:hover {
     background-color: #333333;
 }
+
 /* Ensure full height scrolling */
 html, body {
     height: 100%;
